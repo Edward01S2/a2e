@@ -1,0 +1,11 @@
+/**
+ * Global
+ */
+
+ html {
+   @apply font-poppins bg-white;
+ }
+
+ a {
+   @apply transition duration-150;
+ }
