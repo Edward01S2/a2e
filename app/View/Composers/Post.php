@@ -26,6 +26,7 @@ class Post extends Composer
     {
         return [
             'title' => $this->title(),
+            'posts' => $this->posts(),
         ];
     }
 
@@ -65,5 +66,44 @@ class Post extends Composer
         }
 
         return get_the_title();
+    }
+
+    public function posts() {
+
+        $current = get_the_ID();
+
+        $args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'posts_per_page' => 9,
+            'post__not_in' => array($current),
+        );
+
+        if(in_category(3, $current)) {
+            $args['category__in'] = 3;
+        }
+        else {
+            $args['category__not_in'] = 3;
+        }
+
+        //return $args;
+
+        $posts = new \WP_Query($args);
+
+        $post_data = [];
+        while($posts->have_posts()): $posts->the_post();
+        
+        $id = get_the_ID();
+
+        $post_data[] = [
+            'title' => get_the_title(),
+            'link' => get_the_permalink(),
+            'image' => get_the_post_thumbnail_url(),
+        ];
+
+        endwhile;
+        wp_reset_query();
+
+        return $post_data;
     }
 }

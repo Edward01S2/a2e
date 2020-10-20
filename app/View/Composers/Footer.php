@@ -27,7 +27,9 @@ class Footer extends Composer
         return [
           'logo' => get_field('logo alt', 'options'),
           'nav' => $this->navigation('footer_navigation'),
-          'link' => get_field('footer link', 'options'),
+          'title' => get_field('form title', 'options'),
+          'items' => get_field('footer items', 'options'),
+          'form' => get_field('gravity', 'options'),
         ];
     }
 

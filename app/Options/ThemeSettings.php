@@ -5,6 +5,7 @@ namespace App\Options;
 use Log1x\AcfComposer\Options as Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+use App\Fields\Partials\Form;
 
 class ThemeSettings extends Field
 {
@@ -45,8 +46,11 @@ class ThemeSettings extends Field
                     'rows' => '15'
                 ])
             ->addTab('Footer')
-                ->addLink('footer link')
-                ->addImage('footer logo')
+                ->addText('form title')
+                ->addFields($this->get(Form::class))
+                ->addRepeater('footer items')
+                    ->addText('item')
+                ->endRepeater()
             ->addTab('Social')
                 ->addRepeater('Social')
                     ->addImage('icon')

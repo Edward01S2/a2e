@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} bg-c-blue-50">
+<div id="about" class="{{ $block->classes }} bg-c-blue-50 section">
   <div class="container px-4 mx-auto sm:px-6 lg:px-8">
     <div class="py-12 md:py-16 lg:py-20 2xl:py-24">
       <h2 class="mb-4 text-4xl font-bold font-poppins md:mb-12 lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
@@ -30,7 +30,7 @@
               </svg>
             </div>
           </div>
-          <div class="font-bold tracking-widest uppercase text-c-gray-500 xl:text-lg">
+          <div class="font-bold tracking-widest uppercase subtitle-container text-c-gray-500 xl:text-lg">
             <span class="slide-subtitle">{!! $items[0]['subtitle'] !!}</span><span class="italic"> //</span>
           </div>
         </div>

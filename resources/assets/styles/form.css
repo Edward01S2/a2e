@@ -44,7 +44,7 @@
   @apply hidden;
 }
 
-#gform_1 {
+/* #gform_1 {
   @apply md:flex md:items-center md:flex-wrap;
   .validation_error {
     @apply w-full;
@@ -63,5 +63,37 @@
   }
   .gform_button {
     @apply md:px-12 md:border-2 md:border-white xl:px-16;
+  }
+} */
+
+.footer-form {
+  #gform_2 {
+    @apply flex flex-wrap;
+  }
+  .validation_error {
+    @apply w-full;
+  }
+  .gform_body {
+    @apply flex-grow;
+  }
+  .gform_button {
+    @apply my-auto bg-c-yellow-100 h-full w-12 px-1 py-1 transition duration-300;
+    &:hover {
+    }
+  }
+  .gform_footer {
+    @apply flex items-center bg-c-yellow-100;
+  }
+  .gfield {
+    @apply mb-0;
+    .ginput_container {
+      @apply w-full;
+    }
+    input {
+      @apply py-3 w-full;
+    } 
+  }
+  .gform_confirmation_message_2 {
+    @apply text-center text-white;
   }
 }

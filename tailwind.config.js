@@ -51,10 +51,10 @@ module.exports = {
           'Poppins',
           'sans-serif'
         ],
-        // 'proxima' : [
-        //   'proxima-nova',
-        //   'sans-serif'
-        // ],
+        'proxima' : [
+          'proxima-nova',
+          'sans-serif'
+        ],
       },
       borderWidth: {
         '3': '3px'
@@ -87,6 +87,7 @@ module.exports = {
         '112' : '36rem',
         '116' : '38rem',
         '120' : '42rem',
+        '124' : '48rem',
       },
       opacity: {
         '31': '0.31',
@@ -100,22 +101,25 @@ module.exports = {
       },
       transformOrigin: {
         '100' : '100% 0',
-      }
+      },
+      gridTemplateRows: {
+      '8': 'repeat(8, minmax(0, 1fr))',
+      },
     },
     typography: (theme) => ({
       default: {
-        // css: {
+        css: {
         //   color: theme('colors.c-blue.200'),
         //   strong: {
         //     color: theme('colors.c-blue.200'),
         //   },
-        //   'ul > li:before': {
-        //     backgroundColor: theme('colors.c-orange.100'),
-        //   },
+          'ul > li:before': {
+            backgroundColor: theme('colors.black'),
+          },
         //   'h1, h2, h3, h4, h5' : {
         //     color: theme('colors.c-blue.200'),
         //   }
-        // }
+        }
       }
     })
   },
@@ -123,6 +127,7 @@ module.exports = {
     // scale: ['responsive', 'hover', 'focus', 'group-hover'],
     // display: ['responsive', 'hover', 'group-hover'],
     boxShadow: ({after}) => after(['group-hover']),
+    scale: ({after}) => after(['group-hover']),
   },
   plugins: [
     require('@tailwindcss/ui'),

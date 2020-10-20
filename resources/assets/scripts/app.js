@@ -4,14 +4,15 @@
 import 'jquery';
 import 'alpinejs';
 import 'lity';
-import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
+import Swiper, { Navigation, Autoplay, Pagination, EffectFade } from 'swiper';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { nodeName } from 'jquery';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-Swiper.use([Navigation, Autoplay, Pagination]);
+Swiper.use([Navigation, Autoplay, Pagination, EffectFade]);
 
 $(document).ready(() => {
 
@@ -32,10 +33,243 @@ $(document).ready(() => {
       type: 'bullets',
     },
     on: {
-      slideChangeTransitionEnd: function() {
+      // slideChangeTransitionStart: function() {
+      //   $('.subtitle-container').animate({'opacity' : 0}, 1000);
+      // },
+      slideChangeTransitionStart: function() {
         var active = $('.about-slider .swiper-slide-active').attr('data-subtitle');
-        $('.slide-subtitle').text(active);
+        $('.subtitle-container').animate({'opacity': 0}, 500, function () {
+          $('.slide-subtitle').text(active);
+        }).animate({'opacity': 1}, 1000);
+        //$('.slide-subtitle').text(active);
       }
+    }
+  });
+
+  const processSwiper = new Swiper('.process-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 10000,
+    },
+    navigation: {
+      nextEl: '.process-swiper-next',
+      prevEl: '.process-swiper-prev',
+    },
+    pagination: {
+      el: '.process-swiper-pagination',
+      type: 'bullets',
+    },
+  });
+
+  var strategySwiper = new Swiper('.strategy-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.strategy-swiper-next',
+      prevEl: '.strategy-swiper-prev',
+    },
+    pagination: {
+      el: '.strategy-swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      768: {
+        autoHeight: false,
+      }
+    },
+    on: {
+      slideChangeTransitionStart: function() {
+        //if(strategySwiper.realIndex)
+        let index = strategySwiper.realIndex;
+        //console.log(index);
+        //console.log(strategySwiper.realIndex)
+        switch(index) {
+          case 0:
+            $('.stripe-1').css('background-color', '#3C70F5');
+            $('.stripe-2').css('background-color', '#2F00F0');
+            $('.stripe-3').css('background-color', '#2600C0');
+            break;
+          case 1:
+            $('.stripe-1').css('background-color', '#2F00F0');
+            $('.stripe-2').css('background-color', '#2600C0');
+            $('.stripe-3').css('background-color', '#628BFA');
+            break;
+          case 2:
+            $('.stripe-1').css('background-color', '#2600C0');
+            $('.stripe-2').css('background-color', '#628BFA');
+            $('.stripe-3').css('background-color', '#3C70F5');
+            break;
+          case 3:
+            $('.stripe-1').css('background-color', '#628BFA');
+            $('.stripe-2').css('background-color', '#3C70F5');
+            $('.stripe-3').css('background-color', '#2F00F0');
+            break;
+        }
+      }
+    }
+  });
+
+  const directorSwiper = new Swiper('.director-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+    },
+    navigation: {
+      nextEl: '.director-swiper-next',
+      prevEl: '.director-swiper-prev',
+    },
+    pagination: {
+      el: '.director-swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        centeredSlides: false,
+        spaceBetween: 32,
+        
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        centeredSlides: false,
+        spaceBetween: 64,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        centeredSlides: false,
+        spaceBetween: 96,
+      }
+    },
+  });
+
+  const quoteSwiper = new Swiper('.quote-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 7000,
+    },
+    navigation: {
+      nextEl: '.quote-swiper-next',
+      prevEl: '.quote-swiper-prev',
+    },
+    pagination: {
+      el: '.quote-swiper-pagination',
+      type: 'bullets',
+    },
+  });
+
+  const postsSwiper = new Swiper('.posts-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: '.posts-swiper-next',
+      prevEl: '.posts-swiper-prev',
+    },
+    pagination: {
+      el: '.posts-swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        centeredSlides: false,
+        spaceBetween: 24,
+        
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        centeredSlides: false,
+        spaceBetween: 32,
+      },
+      // 1280: {
+      //   slidesPerView: 3,
+      //   slidesPerGroup: 3,
+      //   centeredSlides: false,
+      //   spaceBetween: 96,
+      // }
+    },
+  });
+
+  const blogSwiper = new Swiper('.blog-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.blog-swiper-next',
+      prevEl: '.blog-swiper-prev',
+    },
+    pagination: {
+      el: '.blog-swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      768: {
+        autoHeight: false,
+      }
+    },
+  });
+
+  const studySwiper = new Swiper('.study-slider', {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    centeredSlides: true,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.study-swiper-next',
+      prevEl: '.study-swiper-prev',
+    },
+    pagination: {
+      el: '.study-swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      768: {
+        autoHeight: false,
+        spaceBetween: 32,
+      }
+    },
+  });
+
+
+  $(window).smartresize(function(e){
+    var width = $(window).width();
+    //console.log('window changed')
+    if(width >= 768) {
+      //console.log('true')
+      strategySwiper.params.autoHeight = false;
+      strategySwiper.update();
+    }
+    //strategySwiper.update();
+
+  });
+
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
+  gsap.to('#nav', {
+    scrollTrigger: {
+      trigger: '.main',
+      start: "top",
+      endTrigger: "html",
+      end:"bottom top",
+      toggleClass: {targets: "#nav", className: "active"},
+      // markers: true,
     }
   });
 
@@ -44,7 +278,7 @@ $(document).ready(() => {
     gsap.to(window, {duration: 2, scrollTo: {y: 0}});
   });
 
-  const navLinks = gsap.utils.toArray("nav .nav-link");
+  const navLinks = gsap.utils.toArray(".nav-container .nav-link");
   //console.log(navLinks);
   navLinks.forEach((link, i) => {
     link.addEventListener("click", function(e) {
@@ -57,6 +291,259 @@ $(document).ready(() => {
       }
     });
   });
+
+  gsap.utils.toArray(".section").forEach((box, i) => {
+    var id = box.getAttribute("id");
+    gsap.to(box, {
+      scrollTrigger: {
+        trigger: box,
+        start: "top 60%",
+        end: "bottom 20%",
+        //markers: true,
+        toggleClass: {targets: ".nav-container a[href='#" + id + "']", className: "active"},
+      },
+    });
+  });
+
+  //Hero Animation
+  var hero = gsap.timeline();
+    hero.fromTo('#hero .triangle-left', {
+      autoAlpha: 0,
+      scale: 2,
+      x: -50,
+    }, {
+      autoAlpha: 1,
+      scale: 1,
+      x: 0,
+      duration: .75,
+    }, 0);
+    hero.fromTo('#hero .diagonal', {
+      x: 100,
+      scale: 3,
+    }, {
+      x: 0,
+      scale: 1,
+      duration: .75,
+    }, 0);
+    hero.fromTo('#hero h1', {
+      y: 25,
+      autoAlpha: 0,
+    },{
+      y: 0,
+      autoAlpha: 1,
+      duration: .5,
+    }, 0.5);
+    hero.fromTo('#hero .content', {
+      y: 25,
+      autoAlpha: 0,
+    },{
+      y: 0,
+      autoAlpha: 1,
+      duration: .5,
+    }, 0.6);
+
+  //Statistics Animation
+  var headlines = gsap.utils.toArray('#statistics .headline');
+  gsap.fromTo(headlines, {
+    y: 25,
+    autoAlpha: 0,
+  },{
+    y: 0,
+    autoAlpha: 1,
+    stagger: .2,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '#statistics',
+      start: "top 65%",
+      //markers: true,
+    }
+  })
+
+  //var service = gsap.utils.toArray('#services .service-item');
+
+  let serv01 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.service-item-1',
+      start: "top 65%",
+      //markers: true,
+    }
+  });
+  serv01.to('#services .service-item-1 .svg-number path', {
+    fill: "black",
+  });
+  serv01.fromTo('#services .service-item-1 .content', {
+    y: 25,
+    autoAlpha: 0,
+    },{
+    y: 0,
+    autoAlpha: 1,
+  });
+  serv01.fromTo('#services .service-item-1 button', {
+    x: -25,
+    autoAlpha: 0,
+    },{
+    x: 0,
+    autoAlpha: 1,
+  });
+
+  let serv02 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.service-item-2',
+      start: "top 65%",
+      //markers: true,
+    }
+  });
+  serv02.to('#services .service-item-2 .svg-number path', {
+    fill: "#FFC322",
+    stroke: "#FFC322",
+  });
+  serv02.fromTo('#services .service-item-2 .content', {
+    y: 25,
+    autoAlpha: 0,
+    },{
+    y: 0,
+    autoAlpha: 1,
+  });
+  serv02.fromTo('#services .service-item-2 button', {
+    x: -25,
+    autoAlpha: 0,
+    },{
+    x: 0,
+    autoAlpha: 1,
+  });
+
+  let serv03 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.service-item-3',
+      start: "top 65%",
+      //markers: true,
+    }
+  });
+  serv03.to('#services .service-item-3 .svg-number path', {
+    fill: "black",
+  });
+  serv03.fromTo('#services .service-item-3 .content', {
+    y: 25,
+    autoAlpha: 0,
+    },{
+    y: 0,
+    autoAlpha: 1,
+  });
+  serv03.fromTo('#services .service-item-3 button', {
+    x: -25,
+    autoAlpha: 0,
+    },{
+    x: 0,
+    autoAlpha: 1,
+  });
+
+  //Quotes Animation
+  var quotes = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#quotes',
+      start: "top 65%",
+      //markers: true,
+    }
+  });
+    quotes.fromTo('#quotes .triangle', {
+      autoAlpha: 0,
+      scale: 2,
+      x: 50,
+    }, {
+      autoAlpha: 1,
+      scale: 1,
+      x: 0,
+      duration: .75,
+    }, 0);
+    quotes.fromTo('#quotes .diagonal', {
+      x: -100,
+      scale: 3,
+    }, {
+      x: 0,
+      scale: 1,
+      duration: .75,
+    }, 0);
+    quotes.fromTo('#quotes .quote-slider', {
+      y: 25,
+      autoAlpha: 0,
+    },{
+      y: 0,
+      autoAlpha: 1,
+      duration: .5,
+    }, 0.5);
+    quotes.fromTo('#quotes .slider-controls', {
+      y: 25,
+      autoAlpha: 0,
+    },{
+      y: 0,
+      autoAlpha: 1,
+      duration: .5,
+    }, 0.6);
+
+    //Companies Animation
+
+    const clientSwiper = new Swiper('.client-slider', {
+      slidesPerView: 1,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      on: {
+        init: function() {
+          var row1 = gsap.utils.toArray('.logo-grid .logo-row-1 a');
+          let comp = gsap.timeline();
+          comp.fromTo(row1, {
+            y: -35,
+            autoAlpha: 0,
+          },{
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.1,
+            stagger: 0.1,
+          }, 0);
+        },
+        slideChangeTransitionStart: function() {
+          var active = clientSwiper.realIndex + 1;
+          //console.log(active);
+          var row = gsap.utils.toArray('.logo-grid .logo-row-' + active + ' a');
+          let comp = gsap.timeline();
+          comp.fromTo(row, {
+            y: -35,
+            autoAlpha: 0,
+          },{
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.1,
+            stagger: 0.1,
+          }, 0);
+          //console.log(row);
+        },
+
+      }
+    });
+
+    //Contact Section Anim
+    // gsap.utils.toArray(".parallax").forEach((section, i) => {
+    //   section.bg = section.querySelector(".bg"); 
+
+    //   // Do the parallax effect on each section
+    //   if (i) {
+    //     section.bg.style.backgroundPosition = `50% ${innerHeight / 2}px`;
+    
+    //     gsap.to(section.bg, {
+    //       backgroundPosition: `50% ${-innerHeight / 2}px`,
+    //       ease: "none",
+    //       scrollTrigger: {
+    //         trigger: section,
+    //         scrub: true
+    //       }
+    //     });
+    //   } 
+    // });
 
 });
 
