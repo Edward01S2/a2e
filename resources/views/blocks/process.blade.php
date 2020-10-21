@@ -9,7 +9,9 @@
               <div class="py-12 pb-8 md:py-16 md:pb-12 swiper-slide lg:py-20 lg:pb-16">
                 <div class="flex flex-col md:flex-row">
                   <div class="mb-12 image md:mb-0 md:w-2/5 lg:w-1/3">
-                    @svg($item['image']['url'], 'h-24 w-auto mx-auto md:mr-16 lg:h-28 xl:h-32')
+                    @if($item['image']['url'])
+                      @svg($item['image']['url'], 'h-24 w-auto mx-auto md:mr-16 lg:h-28 xl:h-32')
+                    @endif
                   </div>
                   <div class="content md:w-3/5 lg:w-2/3">
                     <div class="prose text-c-gray-600 max-w-none lg:prose-lg">

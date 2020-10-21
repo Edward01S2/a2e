@@ -11,7 +11,9 @@
             <div class="flex flex-col md:flex-row">
               <div class="mb-12 image md:mb-0 md:w-2/5 lg:w-1/3">
                 <div class="relative">
-                  @svg($item['image']['url'], 'svg-number stroke-current text-c-blue-500 h-36 w-auto mx-auto relative md:ml-0 lg:h-40 xl:h-48')
+                  @if($item['image']['url'])
+                    @svg($item['image']['url'], 'svg-number stroke-current text-c-blue-500 h-36 w-auto mx-auto relative md:ml-0 lg:h-40 xl:h-48')
+                  @endif
                 </div>
               </div>
               <div class="content md:w-3/5 lg:w-2/3">
