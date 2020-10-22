@@ -2,8 +2,8 @@
   <div class="container px-4 mx-auto sm:px-6 lg:px-8">
     <div class="py-16 text-white md:py-20 lg:py-24 lg:pb-32">
       <div class="mb-12 text-center md:mb-16 lg:mb-24">
-        <h2 class="mb-4 text-4xl font-bold text-white font-poppins lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
-        <div class="text-lg md:max-w-md md:mx-auto">{!! $subtext !!}</div>
+        <h2 class="mb-4 text-4xl font-bold text-white font-poppins lg:text-5xl xl:text-6xl lg:mb-8">{!! $title !!}</h2>
+        <div class="text-lg xl:max-w-6xl xl:mx-auto">{!! $subtext !!}</div>
       </div>
       <div class="flex flex-col space-y-12 md:space-y-20 lg:space-y-24 2xl:max-w-7xl xl:mx-auto xl:space-y-40">
         @foreach($items as $item)

@@ -1,6 +1,6 @@
 <div class="{{ $block->classes }} bg-c-blue-50">
   <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-    <div class="py-12 md:py-16 lg:py-20 xl:py-24 xl:pt-20">
+    <div class="py-12 md:py-16 lg:py-20 xl:py-24 xl:pt-20 2xl:py-32 2xl:pt-28">
       <h2 class="text-4xl font-bold font-poppins lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
       <div class="xl:max-w-6xl xl:mx-auto xl:px-8">
         <div class="relative flex outline-none process-slider swiper-container">

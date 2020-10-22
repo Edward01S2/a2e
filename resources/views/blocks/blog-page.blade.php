@@ -20,7 +20,7 @@
             <a class="relative w-full overflow-hidden item group" href="{!! $post['link'] !!}">
               <div class="relative z-20 p-6 text-white title lg:p-8 xl:p-16">
                 <div class="mb-6 text-xl md:text-2xl lg:text-3xl xl:text-4xl md:w-56 lg:w-64 xl:w-80">{!! $post['title'] !!}</div>
-                <div class="inline-block text-sm font-bold tracking-wide border-b xl:text-base">Read More</div>
+                <div class="inline-block text-sm font-bold tracking-wide border-b xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
               </div>
               <div class="">
                 <div class="absolute inset-0 z-10 w-full h-full bg-black opacity-50"></div>
@@ -80,7 +80,7 @@
             <a class="relative w-full overflow-hidden item md:pb-full group" href="{!! $post['link'] !!}">
               <div class="relative z-20 p-6 text-white text-container lg:p-8 xl:p-16 md:absolute md:w-full md:h-full">
                 <div class="mb-6 text-xl break-words w-36 title lg:text-3xl lg:w-44 xl:text-4xl xl:w-64 2xl:w-72">{!! $post['title'] !!}</div>
-                <div class="inline-block text-sm font-bold tracking-wide border-b xl:text-base">Read More</div>
+                <div class="inline-block text-sm font-bold tracking-wide border-b xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
               </div>
               <div class="">
                 <div class="absolute inset-0 z-10 w-full h-full bg-black opacity-50"></div>

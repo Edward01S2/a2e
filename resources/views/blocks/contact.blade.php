@@ -1,6 +1,6 @@
 <div id="contact" class="{{ $block->classes }} relative section parallax">
   <div class="container relative z-20 px-4 mx-auto sm:px-6 lg:px-8">
-    <div class="py-16 md:py-12 md:flex md:items-center md:space-x-12 md:space-x-reverse md:justify-center lg:space-x-16 lg:space-x-reverse xl:space-x-20 xl:space-x-reverse xl:py-16">
+    <div class="py-16 md:py-12 md:flex md:items-center md:space-x-12 md:space-x-reverse md:justify-center lg:space-x-16 lg:space-x-reverse xl:space-x-20 xl:space-x-reverse xl:py-16 2xl:py-24">
       <div class="text-center md:order-2 md:text-left">
         <h2 class="mb-8 text-4xl font-bold text-white font-poppins lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
         <div class="md:text-center">

@@ -109,6 +109,9 @@ $(document).ready(() => {
             $('.stripe-3').css('background-color', '#2F00F0');
             break;
         }
+      },
+      resize: function () {
+        strategySwiper.update();
       }
     }
   });
@@ -243,12 +246,18 @@ $(document).ready(() => {
         spaceBetween: 32,
       }
     },
+    on: {
+      init: {
+
+      }
+    }
   });
 
 
   $(window).smartresize(function(e){
     var width = $(window).width();
-    //console.log('window changed')
+    console.log('window changed')
+    strategySwiper.update();
     if(width >= 768) {
       //console.log('true')
       strategySwiper.params.autoHeight = false;

@@ -6,7 +6,7 @@
     </div>
     <div class="relative md:w-1/2 md:order-1">
       <div class="container px-4 mx-auto md:ml-auto md:mr-0 md:max-w-384 sm:px-6 lg:px-8 lg:max-w-512 xl:max-w-screen-sm 2xl:max-w-screen-md">
-        <div class="relative z-30 py-8 md:py-12 lg:py-24 xl:py-28 2xl:py-32">
+        <div class="relative z-30 py-8 md:py-12 lg:py-24 xl:py-28 2xl:py-40">
           <h1 class="mb-4 text-4xl font-bold font-poppins lg:text-5xl lg:mb-8 xl:text-6xl">{!! $title !!}</h1>
           <div class="prose content max-w-none text-c-gray-600 lg:prose-lg 2xl:max-w-2xl">{!! $content !!}</div>
         </div>

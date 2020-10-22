@@ -67,6 +67,11 @@
 }
 
 .strategy-slider {
+  .prose {
+    ul > li:before {
+      @apply bg-white;
+    }
+  }
   .swiper-slide {
     &:nth-child(1) {
       @apply bg-c-blue-100;
