@@ -63,7 +63,7 @@ $(document).ready(() => {
     },
   });
 
-  var strategySwiper = new Swiper('.strategy-slider', {
+  const strategySwiper = new Swiper('.strategy-slider', {
     slidesPerView: 'auto',
     grabCursor: true,
     centeredSlides: true,
@@ -256,12 +256,27 @@ $(document).ready(() => {
 
   $(window).smartresize(function(e){
     var width = $(window).width();
-    console.log('window changed')
-    strategySwiper.update();
-    if(width >= 768) {
-      //console.log('true')
-      strategySwiper.params.autoHeight = false;
+    //console.log('window changed')
+    if($('.strategy-slider').length) {
       strategySwiper.update();
+    }
+    if($('.about-slider').length) {
+      aboutSwiper.update();
+    }
+    if($('.director-slider').length) {
+      directorSwiper.update();
+    }
+    if($('.process-slider').length) {
+      processSwiper.update();
+    }
+    if($('.blog-slider').length) {
+      blogSwiper.update();
+    }
+    if($('.study-slider').length) {
+      tudySwiper.update();
+    }
+    if($('.posts-slider').length) {
+      postsSwiper.update();
     }
     //strategySwiper.update();
 
@@ -480,6 +495,14 @@ $(document).ready(() => {
       autoAlpha: 1,
       duration: .5,
     }, 0.5);
+    quotes.fromTo('#quotes .quote-svg', {
+      y: 25,
+      autoAlpha: 0,
+    },{
+      y: 0,
+      autoAlpha: 1,
+      duration: .5,
+    }, 0.6);
     quotes.fromTo('#quotes .slider-controls', {
       y: 25,
       autoAlpha: 0,
@@ -534,6 +557,31 @@ $(document).ready(() => {
 
       }
     });
+
+    //Blog Page Animation
+    var caseStudies = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.study-title',
+        start: "top 65%",
+        //markers: true,
+      }
+    });
+      caseStudies.fromTo('.study-row-1', {
+        autoAlpha: 0,
+        xPercent: 100,
+      }, {
+        autoAlpha: 1,
+        xPercent: 0,
+        duration: 2,
+      }, 0);
+      caseStudies.fromTo('.study-row-2', {
+        autoAlpha: 0,
+        xPercent: -100,
+      }, {
+        autoAlpha: 1,
+        xPercent: 0,
+        duration: 2,
+      }, 0);
 
     //Contact Section Anim
     // gsap.utils.toArray(".parallax").forEach((section, i) => {

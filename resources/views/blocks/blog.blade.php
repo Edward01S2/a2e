@@ -1,5 +1,5 @@
 <div id="blog" class="{{ $block->classes }} section">
-  <div class="container px-4 py-16 mx-auto sm:px-6 md:py-20 lg:px-8 lg:py-24 xl:py-28">
+  <div class="container px-4 py-16 mx-auto sm:px-6 lg:px-8 lg:py-24 xl:py-28">
     <div class="mb-16 md:mb-20 lg:mb-24 xl:mb-28">
       <a class="inline-flex items-center mb-8 text-lg font-bold tracking-widest uppercase font-proxima text-c-gray-600 lg:text-xl xl:text-2xl xl:mb-12 hover:text-c-yellow-100" href="{!! $blog['url'] !!}">
         <span class="mr-2">{!! $blog['title'] !!}</span>

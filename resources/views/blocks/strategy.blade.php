@@ -6,7 +6,7 @@
     <div class="relative flex outline-none strategy-slider swiper-container bg-c-blue-100">
       <div class="swiper-wrapper">
         @foreach($items as $item)
-          <div class="py-12 pb-20 sm:px-0 md:py-16 md:pb-24 swiper-slide lg:py-20 lg:pb-28 md:h-auto xl:py-24 xl:pb-32">
+          <div class="py-16 pb-20 sm:px-0 md:py-20 md:pb-24 swiper-slide lg:py-20 lg:pb-28 md:h-auto xl:py-24 xl:pb-32">
             <div class="container flex flex-col px-4 sm:px-6 lg:px-8 md:mx-auto md:flex-row">
               <div class="content md:w-3/5">
                 <h3 class="text-4xl font-bold leading-9 text-white font-poppins md:text-5xl xl:text-6xl">{!! $item['title'] !!}</h3>

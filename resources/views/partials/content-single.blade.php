@@ -19,7 +19,7 @@
       <img class="w-full h-auto" src="{!! get_the_post_thumbnail_url() !!}" alt="">
   </div>
 
-  <div class="container px-4 pb-16 mx-auto entry-content sm:px-6 lg:px-8">
+  <div class="container px-4 pb-16 mx-auto entry-content sm:px-6 lg:px-8 lg:pb-32 xl:pb-40">
     <div class="prose max-w-none lg:prose-lg md:pl-10 lg:pl-16 xl:pl-24">
       @php(the_content())
     </div>
@@ -41,7 +41,7 @@
                   <div class="absolute inset-0 z-10 w-full h-full bg-black opacity-25"></div>
                 </a>
                 <a href="{!! $post['link'] !!}">
-                  <div class="text-xl font-medium font-poppins">{!! $post['title'] !!}</div>  
+                  <div class="text-xl font-medium font-poppins md:w-3/4 lg:w-4/5">{!! $post['title'] !!}</div>  
                 </a>
               </div>
             @endforeach

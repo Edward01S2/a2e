@@ -1,6 +1,6 @@
 <div id="about" class="{{ $block->classes }} bg-c-blue-50 section">
   <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-    <div class="py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-32">
+    <div class="py-16 md:py-20 lg:py-20 xl:py-28 2xl:py-32">
       <h2 class="mb-4 text-4xl font-bold font-poppins md:mb-12 lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
       <div class="md:max-w-xl md:ml-auto lg:max-w-3xl xl:max-w-4xl 2xl:max-w-6xl">
         <div class="relative flex outline-none about-slider swiper-container">

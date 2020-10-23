@@ -1,12 +1,12 @@
 <div id="services" class="{{ $block->classes }} section">
-  <div class="pt-12 md:pt-16 lg:pt-20">
+  <div class="pt-16 md:pt-20 lg:pt-24">
     <div class="text-center">
       <h2 class="text-4xl font-bold font-poppins lg:text-5xl xl:text-6xl">{!! $title !!}</h2>
     </div>
 
     <div class="service-items">
       @foreach($items as $item)
-        <div class="py-12 border-b service-item service-item-{!! $loop->iteration !!} border-c-gray-400 md:py-16 lg:py-20 xl:py-24">
+        <div class="py-16 border-b service-item service-item-{!! $loop->iteration !!} border-c-gray-400 md:py-20 lg:py-24 xl:py-24">
           <div class="container px-4 mx-auto sm:px-6 lg:px-8 xl:max-w-6xl" x-data="{open: false}">
             <div class="flex flex-col md:flex-row">
               <div class="mb-12 image md:mb-0 md:w-2/5 lg:w-1/3">

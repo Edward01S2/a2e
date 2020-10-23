@@ -5,11 +5,11 @@
       <div class="absolute left-0 w-16 h-full -ml-12 transform skew-x-12 bg-black triangle lg:-ml-16 lg:w-24"></div>
     </div>
     <div class="relative z-30 md:w-1/2 md:order-2 bg-c-blue-50">
-      <div class="container relative z-40 px-4 pb-12 mx-auto md:mr-auto md:ml-0 md:max-w-384 sm:px-6 lg:px-8 lg:pb-24 lg:max-w-512 xl:max-w-screen-sm 2xl:max-w-screen-md">
+      <div class="container relative z-40 px-4 pb-16 mx-auto md:mr-auto md:ml-0 md:max-w-384 sm:px-6 lg:px-8 lg:pb-24 lg:max-w-512 xl:max-w-screen-sm 2xl:max-w-screen-md">
         <div class="relative z-40 quote-slider swiper-container">
           <div class="swiper-wrapper">
             @foreach($quotes as $item)
-              <div class="relative z-30 py-12 swiper-slide md:py-12 lg:py-24 lg:pb-16 xl:py-28 2xl:py-32">
+              <div class="relative z-30 pt-16 pb-8 swiper-slide md:pt-20 lg:py-24 lg:pb-16 xl:py-28 xl:pb-20">
                 <h1 class="mb-4 text-2xl font-bold font-poppins xl:text-3xl">{!! $item['company'] !!}</h1>
                 <div class="mb-4 prose text-black max-w-none lg:prose-lg 2xl:max-w-2xl">{!! $item['content'] !!}</div>
                 <div class="text-sm font-bold font-poppins xl:text-base">{!! $item['name'] !!}</div>
@@ -35,7 +35,7 @@
         </div>
 
       </div>
-      @svg('images.quotes', 'h-16 w-16 absolute opacity-50 top-0 mt-6 -ml-2 left-0 z-30 md:mt-20 md:-ml-10 md:h-10 md:w-10 md:opacity-100 lg:mt-32 xl:h-12 xl:w-12 xl:mt-36 2xl:mt-40')
+      @svg('images.quotes', 'quote-svg h-16 w-16 absolute opacity-50 top-0 mt-6 -ml-2 left-0 z-30 md:mt-20 md:-ml-10 md:h-12 md:w-12 md:opacity-100 lg:mt-32 xl:h-12 xl:w-12 xl:mt-36 2xl:mt-40')
       <div class="absolute top-0 bottom-0 left-0 z-20 hidden w-24 h-full -ml-12 transform skew-x-12 diagonal bg-c-blue-50 md:block lg:w-32 lg:-ml-16"></div>
     </div>
     
