@@ -21,6 +21,7 @@ $(document).ready(() => {
     grabCursor: true,
     centeredSlides: true,
     spaceBetween: 32,
+    speed: 1000,
     autoplay: {
       delay: 10000,
     },
@@ -333,8 +334,8 @@ $(document).ready(() => {
   var hero = gsap.timeline();
     hero.fromTo('#hero .triangle-left', {
       autoAlpha: 0,
-      scale: 2,
-      x: -50,
+      scale: 3,
+      x: -100,
     }, {
       autoAlpha: 1,
       scale: 1,
@@ -374,8 +375,8 @@ $(document).ready(() => {
   },{
     y: 0,
     autoAlpha: 1,
-    stagger: .2,
-    duration: 1,
+    stagger: .3,
+    duration: 1.25,
     scrollTrigger: {
       trigger: '#statistics',
       start: "top 65%",
@@ -395,20 +396,20 @@ $(document).ready(() => {
   serv01.to('#services .service-item-1 .svg-number path', {
     fill: "black",
   });
-  serv01.fromTo('#services .service-item-1 .content', {
-    y: 25,
-    autoAlpha: 0,
-    },{
-    y: 0,
-    autoAlpha: 1,
-  });
-  serv01.fromTo('#services .service-item-1 button', {
-    x: -25,
-    autoAlpha: 0,
-    },{
-    x: 0,
-    autoAlpha: 1,
-  });
+  // serv01.fromTo('#services .service-item-1 .content', {
+  //   y: 25,
+  //   autoAlpha: 0,
+  //   },{
+  //   y: 0,
+  //   autoAlpha: 1,
+  // });
+  // serv01.fromTo('#services .service-item-1 button', {
+  //   x: -25,
+  //   autoAlpha: 0,
+  //   },{
+  //   x: 0,
+  //   autoAlpha: 1,
+  // });
 
   let serv02 = gsap.timeline({
     scrollTrigger: {
@@ -421,20 +422,20 @@ $(document).ready(() => {
     fill: "#FFC322",
     stroke: "#FFC322",
   });
-  serv02.fromTo('#services .service-item-2 .content', {
-    y: 25,
-    autoAlpha: 0,
-    },{
-    y: 0,
-    autoAlpha: 1,
-  });
-  serv02.fromTo('#services .service-item-2 button', {
-    x: -25,
-    autoAlpha: 0,
-    },{
-    x: 0,
-    autoAlpha: 1,
-  });
+  // serv02.fromTo('#services .service-item-2 .content', {
+  //   y: 25,
+  //   autoAlpha: 0,
+  //   },{
+  //   y: 0,
+  //   autoAlpha: 1,
+  // });
+  // serv02.fromTo('#services .service-item-2 button', {
+  //   x: -25,
+  //   autoAlpha: 0,
+  //   },{
+  //   x: 0,
+  //   autoAlpha: 1,
+  // });
 
   let serv03 = gsap.timeline({
     scrollTrigger: {
@@ -446,20 +447,20 @@ $(document).ready(() => {
   serv03.to('#services .service-item-3 .svg-number path', {
     fill: "black",
   });
-  serv03.fromTo('#services .service-item-3 .content', {
-    y: 25,
-    autoAlpha: 0,
-    },{
-    y: 0,
-    autoAlpha: 1,
-  });
-  serv03.fromTo('#services .service-item-3 button', {
-    x: -25,
-    autoAlpha: 0,
-    },{
-    x: 0,
-    autoAlpha: 1,
-  });
+  // serv03.fromTo('#services .service-item-3 .content', {
+  //   y: 25,
+  //   autoAlpha: 0,
+  //   },{
+  //   y: 0,
+  //   autoAlpha: 1,
+  // });
+  // serv03.fromTo('#services .service-item-3 button', {
+  //   x: -25,
+  //   autoAlpha: 0,
+  //   },{
+  //   x: 0,
+  //   autoAlpha: 1,
+  // });
 
   //Quotes Animation
   var quotes = gsap.timeline({

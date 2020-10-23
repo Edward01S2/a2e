@@ -12,7 +12,7 @@
 
       <div class="items-center hidden nav-container lg:flex lg:space-x-6 xl:space-x-8">
         @foreach ($navigation as $item)
-          <a class="nav-link text-sm tracking-widest text-white focus:outline-none group transition duration-150 ease-in-out border-transparent border-b-3 hover:text-c-yellow-100 hover:border-c-yellow-100 {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}" target="{!! $item->target !!}">
+          <a class="nav-link text-sm tracking-widest text-white focus:outline-none group transition duration-150 ease-in-out border-transparent border-b-3 hover:text-c-yellow-100 {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}" target="{!! $item->target !!}">
             <div class="nav-text group-hover:text-c-gold-100">{{ $item->label }}</div>
           </a>
         @endforeach

@@ -11,7 +11,7 @@
       </div>
 
       <div class="text-center text-white">
-        <div class="mb-4">{!! $title !!}</div>
+        <div class="mb-4 text-lg xl:mb-8">{!! $title !!}</div>
         <div class="footer-form text-c-blue-500 md:max-w-lg md:mx-auto xl:max-w-xl">
           @include('partials.form', ['form' => $form])
         </div>
@@ -20,7 +20,7 @@
       <div class="hidden md:block md:mt-12">
         <div class="flex items-center justify-center space-x-8 footer-nav lg:space-x-10 lg:items-center xl:space-x-12">
           @foreach ($nav as $item)
-            <a class="nav-link tracking-wide leading-5 text-white group text-sm focus:outline-none transition duration-150 ease-in-out hover:text-c-yellow-100 {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}">
+            <a class="nav-link tracking-wide leading-5 text-white group focus:outline-none transition duration-150 ease-in-out hover:text-c-yellow-100 {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}" href="{{ $item->url }}">
               <div class="text-center">{{ $item->label }}</div>
             </a>
           @endforeach

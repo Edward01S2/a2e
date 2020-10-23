@@ -38,10 +38,10 @@
         </div>
       </div>
 
-      <div class="absolute top-0 bottom-0 right-0 z-30 hidden w-1/3 grid-cols-3 md:grid stripe-container">
-        <div class="h-full transition duration-200 stripe-1 bg-c-blue-200"></div>
-        <div class="h-full transition duration-200 stripe-2 bg-c-blue-300"></div>
-        <div class="h-full transition duration-200 stripe-3 bg-c-blue-400"></div>
+      <div class="absolute top-0 bottom-0 right-0 z-30 hidden w-1/3 md:flex stripe-container">
+        <div class="w-1/3 h-full transition duration-200 stripe-1 bg-c-blue-200"></div>
+        <div class="w-1/3 h-full transition duration-200 stripe-2 bg-c-blue-300"></div>
+        <div class="w-1/3 h-full transition duration-200 stripe-3 bg-c-blue-400"></div>
       </div>
 
     </div>

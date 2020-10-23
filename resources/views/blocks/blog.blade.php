@@ -12,7 +12,7 @@
           <a class="relative w-full overflow-hidden item pb-1/2 md:pb-0 group" href="{!! $post['link'] !!}">
             <div class="relative z-20 p-6 text-white title lg:p-8 xl:p-12">
               <div class="mb-6 text-xl xl:text-2xl">{!! $post['title'] !!}</div>
-              <div class="inline-block text-sm font-bold border-b xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
+              <div class="inline-block text-sm font-bold xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
             </div>
             <div class="w-full h-full overflow-hidden">
               <div class="absolute inset-0 z-10 w-full h-full bg-black opacity-50"></div>
@@ -35,7 +35,7 @@
           <a class="relative w-full overflow-hidden pb-1/2 group" href="{!! $post['link'] !!}">
             <div class="relative z-20 p-6 text-white lg:p-8 xl:p-12">
               <div class="mb-6 text-xl xl:text-2xl">{!! $post['title'] !!}</div>
-              <div class="inline-block text-sm font-bold border-b xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
+              <div class="inline-block text-sm font-bold xl:text-base group-hover:text-c-yellow-100 group-hover:border-c-yellow-100">Read More</div>
             </div>
             <div class="w-full h-full">
               <div class="absolute inset-0 z-10 w-full h-full bg-black opacity-50"></div>

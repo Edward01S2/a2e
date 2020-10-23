@@ -68,7 +68,7 @@
 
 .footer-form {
   #gform_2 {
-    @apply flex flex-wrap;
+    @apply flex;
   }
   .validation_error {
     @apply w-full;

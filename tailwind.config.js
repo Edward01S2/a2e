@@ -94,7 +94,7 @@ module.exports = {
         '90': '0.9',
       },
       screens: {
-        '2xl' : '1536px',
+        //'2xl' : '1536px',
         // '3xl' : '1625px'
       },
       boxShadow: {
