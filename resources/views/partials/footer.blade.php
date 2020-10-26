@@ -32,7 +32,7 @@
 
   <div class="border-t border-c-gray-200">
     <div class="container px-4 py-12 mx-auto sm:px-6 lg:px-8 lg:max-w-3xl">
-      <div class="flex flex-col space-y-4 text-xs font-bold tracking-widest text-center uppercase text-c-gray-300 md:flex-row md:justify-between md:space-y-0">
+      <div class="flex flex-col space-y-4 text-xs tracking-widest text-center uppercase text-c-gray-300 md:flex-row md:justify-between md:space-y-0">
         <div class="copyright">
           <span>&copy; <?php echo esc_attr( date( 'Y' ) ); ?></span>
           {{ $siteName }}

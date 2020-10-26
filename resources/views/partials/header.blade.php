@@ -45,7 +45,7 @@
       <ul class="flex flex-col space-y-6">
         @foreach ($navigation as $item)
           <li class="group relative px-4 transition duration-150 ease-in-out {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }}">
-            <a class="inline-block text-lg tracking-wider text-white transition duration-150 ease-in-out border-transparent border-b-3 hover:text-c-yellow-100 hover:border-c-yellow-100 focus:outline-none md:text-base" href="{{ $item->url }}">
+            <a @click="open = false" class="inline-block text-lg tracking-wider text-white transition duration-150 ease-in-out border-transparent border-b-3 hover:text-c-yellow-100 hover:border-c-yellow-100 focus:outline-none md:text-base" href="{{ $item->url }}">
               {{ $item->label }}
             </a>
           </li>

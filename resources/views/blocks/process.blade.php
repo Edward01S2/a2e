@@ -6,9 +6,9 @@
         <div class="relative flex outline-none process-slider swiper-container">
           <div class="swiper-wrapper">
             @foreach($items as $item)
-              <div class="py-12 pb-8 md:py-16 md:pb-12 swiper-slide lg:py-20 lg:pb-16">
+              <div class="py-10 pb-6 md:py-16 md:pb-12 swiper-slide lg:py-20 lg:pb-16">
                 <div class="flex flex-col md:flex-row">
-                  <div class="mb-12 image md:mb-0 md:w-2/5 lg:w-1/3">
+                  <div class="mb-8 image md:mb-0 md:w-2/5 lg:w-1/3">
                     @if($item['image']['url'])
                       @svg($item['image']['url'], 'h-24 w-auto mx-auto md:mr-16 lg:h-28 xl:h-32')
                     @endif
