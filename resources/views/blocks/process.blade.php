@@ -10,7 +10,7 @@
                 <div class="flex flex-col md:flex-row">
                   <div class="mb-8 image md:mb-0 md:w-2/5 lg:w-1/3">
                     @if($item['image']['url'])
-                      @svg($item['image']['url'], 'h-24 w-auto mx-auto md:mr-16 lg:h-28 xl:h-32')
+                      @svg($item['image']['url'], 'h-12 w-auto mx-auto md:h-24 md:mr-16 lg:h-28 xl:h-32')
                     @endif
                   </div>
                   <div class="content md:w-3/5 lg:w-2/3">
