@@ -17,7 +17,7 @@
 }
 
 .nav-contact {
-  @apply lg:rounded-full lg:border-2 lg:px-6 lg:py-2 lg:text-c-blue-500 lg:border-c-yellow-100 lg:bg-c-yellow-100 lg:hover:text-c-blue-500;
+  @apply lg:rounded-full lg:border-2 lg:px-6 lg:py-2 lg:text-c-blue-500 lg:border-c-yellow-100 lg:bg-c-yellow-100 lg:hover:text-c-blue-500 lg:hover:border-white lg:hover:bg-white;
 }
 
 .nav-link.active {
