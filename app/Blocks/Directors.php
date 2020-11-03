@@ -119,6 +119,7 @@ class Directors extends Block
     public function with()
     {
         return [
+            'show' => get_field('show'),
             'directors' => get_field('directors'),
             'title' => get_field('title')
         ];
@@ -134,6 +135,7 @@ class Directors extends Block
         $directors = new FieldsBuilder('directors');
 
         $directors
+            ->addTrueFalse('show')
             ->addText('title')
             ->addRepeater('directors', [
                 'collapsed' => 'name',

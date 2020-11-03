@@ -1,3 +1,4 @@
+@if($show)
 <div class="{{ $block->classes }} bg-c-blue-50">
   <div class="container px-4 mx-auto sm:px-6 lg:px-8">
     <div class="py-16 md:py-20 lg:py-24 xl:py-24">
@@ -47,3 +48,4 @@
     <InnerBlocks />
   </div>
 </div>
+@endif
