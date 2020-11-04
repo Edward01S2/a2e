@@ -57,6 +57,7 @@
 
   </div>
 
+  @if($studies)
   <div class="container px-4 mx-auto my-12 study-title sm:px-6 lg:px-8 md:my-16 lg:my-24">
     <div class="md:flex md:items-center md:space-x-12 lg:space-x-16 xl:max-w-5xl xl:mx-auto 2xl:max-w-7xl">
       <h2 class="mb-4 text-4xl font-bold font-poppins md:mb-0 lg:text-5xl xl:text-6xl">{!! $s_title !!}</h2>
@@ -131,6 +132,8 @@
       </div>
     </div>
   </div>
+
+  @endif
 
   <div>
     <InnerBlocks />

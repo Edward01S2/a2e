@@ -119,7 +119,8 @@ class Blog extends Block
     public function with()
     {
         return [
-            'show' => get_field('show'),
+            'show_blog' => get_field('show blog'),
+            'show_studies' => get_field('show studies'),
             'blog' => get_field('blog'),
             'posts' => $this->blog(),
             'studies' => get_field('studies'),
@@ -137,8 +138,9 @@ class Blog extends Block
         $blog = new FieldsBuilder('blog');
 
         $blog
-            ->addTrueFalse('show')
+            ->addTrueFalse('show blog')
             ->addLink('blog')
+            ->addTrueFalse('show studies')
             ->addLink('studies');
 
         return $blog->build();
