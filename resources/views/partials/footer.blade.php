@@ -3,10 +3,20 @@
     <div class="flex flex-col px-4 py-12 md:py-16">
 
       <div class="mb-12 md:mb-8">
-        <div class="flex items-center justify-center md:justify-start">
+        <div class="flex items-center justify-center md:justify-between">
           <a href="{{ home_url('/') }}" class="hover:opacity-50">
             <img class="w-auto h-12" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
           </a>
+          @if($social)
+            <div class="items-center justify-center hidden pt-8 space-x-8 md:flex md:flex-row md:py-0 lg:py-0 lg:items-start lg:justify-start">
+              @foreach($social as $item)
+                <a class="hover:opacity-50" href="{!! $item['url'] !!}" target="_blank">
+                  <img class="h-8 lg:h-6" src="{!! $item['icon']['url'] !!}" alt="">
+                  {!! $item['link']['title'] !!}
+                </a>
+              @endforeach
+            </div>
+          @endif
         </div>
       </div>
 
