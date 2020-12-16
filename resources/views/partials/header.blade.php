@@ -1,11 +1,11 @@
 <nav id="nav" x-data="{open: false}" class="fixed z-50 w-full bg-c-blue-500">
-  <div class="container px-4 py-3 mx-auto sm:px-6 lg:px-8">
+  <div class="container px-4 py-4 mx-auto sm:px-6 lg:px-8 lg:py-6">
     <div class="flex items-center justify-between">
 
       <div class="lg:flex-shrink-0">
         <div class="flex items-center flex-shrink-0 md:justify-center">
           <a href="{{ home_url('/') }}" class="hover:opacity-50">
-            <img id="logo-main" class="w-auto h-14 lg:h-16" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
+            <img id="logo-main" class="w-auto h-4 xl:h-6" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
           </a>
         </div>
       </div>

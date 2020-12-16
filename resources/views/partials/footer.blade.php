@@ -8,7 +8,10 @@
             <img class="w-auto h-12" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
           </a>
           @if($social)
-            <div class="items-center justify-center hidden pt-8 space-x-8 md:flex md:flex-row md:py-0 lg:py-0 lg:items-start lg:justify-start">
+            <div class="items-center justify-center hidden pt-8 space-x-8 md:flex md:flex-row md:py-0 lg:py-0 lg:items-center lg:justify-start">
+              <div class="mr-8 xl:mr-12">
+                <img class="w-20 h-20 xl:w-24 xl:h-24" src="{!! $footer_logo['url'] !!}" alt="">
+              </div>
               @foreach($social as $item)
                 <a class="hover:opacity-50" href="{!! $item['url'] !!}" target="_blank">
                   <img class="h-8 lg:h-6" src="{!! $item['icon']['url'] !!}" alt="">

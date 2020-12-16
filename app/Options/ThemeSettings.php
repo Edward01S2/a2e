@@ -47,6 +47,7 @@ class ThemeSettings extends Field
                 ])
             ->addTab('Footer')
                 ->addText('form title')
+                ->addImage('footer logo')
                 ->addFields($this->get(Form::class))
                 ->addRepeater('footer items')
                     ->addText('item')
